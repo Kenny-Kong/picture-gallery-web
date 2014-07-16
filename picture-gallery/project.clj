@@ -10,7 +10,8 @@
                  [lib-noir "0.7.6"]
                  [com.taoensso/timbre "2.6.1"]
                  [com.postspectacular/rotor "0.1.0"]
-                 [environ "0.4.0"]]
+                 [environ "0.4.0"]
+                 [selmer "0.5.4"]]
   :plugins [[lein-ring "0.8.10"]
             [lein-environ "0.4.0"]]
   :ring {:handler picture-gallery.handler/app
