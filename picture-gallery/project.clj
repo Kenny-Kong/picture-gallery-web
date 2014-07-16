@@ -11,9 +11,15 @@
                  [com.taoensso/timbre "2.6.1"]
                  [com.postspectacular/rotor "0.1.0"]
                  [environ "0.4.0"]
-                 [selmer "0.5.4"]]
+                 [selmer "0.5.4"]
+                 [org.clojure/tools.reader "0.7.10"]
+                 [org.clojure/clojurescript "0.0-1806"]
+                 [domina "1.0.0"]
+                 [cljs-ajax "0.2.0"]
+                 ]
   :plugins [[lein-ring "0.8.10"]
-            [lein-environ "0.4.0"]]
+            [lein-environ "0.4.0"]
+            [lein-cljsbuild "0.3.2"]]
   :ring {:handler picture-gallery.handler/app
          :init picture-gallery.handler/init
          :destroy picture-gallery.handler/destroy}
@@ -38,4 +44,10 @@
           :db-user "postgres"
           :db-pass "postgres"
           :galleries-path "galleries"}}}
+  :cljsbuild
+  {:builds
+   [{:source-paths ["src-cljs"]
+     :compiler
+     {:pretty-print false
+      :output-to "resources/public/js/gallery-cljs.js"}}]}
   )
