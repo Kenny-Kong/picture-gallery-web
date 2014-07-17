@@ -16,6 +16,13 @@
                  [org.clojure/clojurescript "0.0-1806"]
                  [domina "1.0.0"]
                  [cljs-ajax "0.2.0"]
+                 [ring-middleware-format "0.3.1"]
+                 [korma "0.3.0-RC5"]
+                 [log4j "1.2.15"
+                  :exclusions [javax.mail/mail
+                               javax.jms/jms
+                               com.sun.jdmk/jmxtools
+                               com.sun.jmx/jmxri]]
                  ]
   :plugins [[lein-ring "0.8.10"]
             [lein-environ "0.4.0"]
@@ -46,8 +53,20 @@
           :galleries-path "galleries"}}}
   :cljsbuild
   {:builds
-   [{:source-paths ["src-cljs"]
-     :compiler
-     {:pretty-print false
-      :output-to "resources/public/js/gallery-cljs.js"}}]}
+   ;   [{:source-paths ["src-cljs"]
+   ;     :compiler
+   ;     {:pretty-print false
+   ;      :output-to "resources/public/js/gallery-cljs.js"}}]
+   {:dev {:source-paths ["src-cljs"]
+          :compiler
+          {:pretty-print true
+           :output-to "resources/public/js/gallery-cljs.js"}}
+    :prod {:source-paths ["src-cljs"]
+           :compiler
+           {
+            ;:optimizations :advanced
+            :pretty-print true
+            :externs ["resources/externs.js"]
+            :output-to "resources/public/js/gallery-cljs.js"}}}
+   }
   )

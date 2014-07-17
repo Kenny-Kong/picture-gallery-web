@@ -32,3 +32,12 @@
 2014-07-16 19:02:27 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down
 2014-07-16 19:06:37 swift-auth INFO [picture-gallery.handler] - picture-gallery started successfully
 2014-07-16 20:20:18 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down
+2014-07-17 09:56:45 swift-auth INFO [picture-gallery.handler] - picture-gallery started successfully
+2014-07-17 10:01:59 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down
+2014-07-17 10:02:09 swift-auth INFO [picture-gallery.handler] - picture-gallery started successfully
+2014-07-17 10:08:03 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down
+2014-07-17 10:08:40 swift-auth INFO [picture-gallery.handler] - picture-gallery started successfully
+2014-07-17 10:09:07 swift-auth ERROR [picture-gallery.routes.upload] - an error has occured while uploading #<core$name clojure.core$name@13c4526d>
+2014-07-17 10:40:16 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down
+2014-07-17 10:41:05 swift-auth INFO [picture-gallery.handler] - picture-gallery started successfully
+2014-07-17 10:46:07 swift-auth INFO [picture-gallery.handler] - picture-gallery is shutting down

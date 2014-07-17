@@ -13,6 +13,7 @@
             [noir.session :as session]
             [taoensso.timbre :as timbre]
             [com.postspectacular.rotor :as rotor]
+            [ring.middleware.format :refer [wrap-restful-format]]
             ))
 
 (defn init []
@@ -45,5 +46,6 @@
                                        upload-routes 
                                        gallery-routes
                                        app-routes]
+                                      :middleware [wrap-restful-format]
                                       :access-rules [user-page]))
 

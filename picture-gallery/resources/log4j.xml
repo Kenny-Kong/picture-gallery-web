@@ -1,0 +1,5 @@
+<log4j:configuration>
+	<logger name="com.mchange">
+		<level value="WARN" />
+	</logger>
+</log4j:configuration>

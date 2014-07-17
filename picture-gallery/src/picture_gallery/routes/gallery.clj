@@ -44,7 +44,8 @@
             [picture-gallery.views.layout :as layout]
             [picture-gallery.util :refer [thumb-prefix]]
             [picture-gallery.models.db :as db]
-            [noir.session :as session]))
+            [noir.session :as session]
+            ))
 
 (defn display-gallery [userid]
   (layout/render "gallery.html"
